@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { addGoal } from '../services/api';
-import { v4 as uuidv4 } from 'uuid';
 
 function GoalForm({ refreshGoals }) {
   const [goal, setGoal] = useState({
@@ -18,7 +17,7 @@ function GoalForm({ refreshGoals }) {
     e.preventDefault();
     await addGoal({
       ...goal,
-      id: uuidv4(),
+      targetAmount: Number(goal.targetAmount),
       savedAmount: 0,
       createdAt: new Date().toISOString().split('T')[0]
     });
