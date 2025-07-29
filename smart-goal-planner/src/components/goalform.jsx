@@ -30,7 +30,13 @@ function GoalForm({ refreshGoals }) {
       <h2>Add New Goal</h2>
       <input name="name" placeholder="Goal Name" value={goal.name} onChange={handleChange} required />
       <input name="targetAmount" type="number" placeholder="Target Amount" value={goal.targetAmount} onChange={handleChange} required />
-      <input name="category" placeholder="Category" value={goal.category} onChange={handleChange} required />
+            <select name="category" value={goal.category} onChange={handleChange} required>
+        <option value="" disabled>Select Category</option>
+        <option value="Savings">Savings</option>
+        <option value="Travel">Travel</option>
+        <option value="Investment">Investment</option>
+        <option value="Retirement">Retirement</option>
+      </select>
       <input name="deadline" type="date" value={goal.deadline} onChange={handleChange} required />
       <button type="submit">Add Goal</button>
     </form>

@@ -62,6 +62,7 @@ function Goal({ goal, refreshGoals }) {
           {goal.savedAmount >= goal.targetAmount && <p className="complete">✅ Goal Complete!</p>}
           <button onClick={handleEdit}>Edit</button>
           <button onClick={handleDelete}>Delete</button>
+          <button>delete</button>
         </div>
       )}
     </div>
