@@ -1,5 +1,3 @@
-
-
 {
   "name": "phase-2-code-challenge",
   "version": "1.0.0",
@@ -8,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite build",
+    "build": "cd smart-goal-planner && npm run build",
     "preview": "vite preview"
   },
   "repository": {
@@ -23,6 +21,8 @@
   },
   "homepage": "https://github.com/nashville149/phase-2-code-challenge#readme",
   "dependencies": {
+    "concurrently": "^9.2.0",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
